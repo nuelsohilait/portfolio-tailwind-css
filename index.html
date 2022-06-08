@@ -413,8 +413,6 @@
           // Tampilkan Tombol Processing, Hilangkan Tombol Send
           btnSubmit.classList.toggle('hidden');
           btnProcessing.classList.toggle('hidden');
-          // Reset Form
-          form.reset();
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then((response) => {
                 // Tampilkan Tombol Send, Hilangkan Tombol Processing
@@ -422,6 +420,8 @@
                 btnProcessing.classList.toggle('hidden');
                 // Tampilkan Alert
                 myAlert.classList.toggle('hidden');
+                // Reset Form
+                form.reset();
                 console.log('Success!', response);
             })
             .catch(error => console.error('Error!', error.message))
