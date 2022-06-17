@@ -52,4 +52,10 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
     darkToggle.checked = true;
   } else {
     darkToggle.checked = false;
-  }
+  };
+
+// Modal
+function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+  };
